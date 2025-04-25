@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { TasksPage } from './pages/TasksPage'
 import { TaskFormPage } from './pages/TaskFormPage'
+import { FormularioColaborativo } from './pages/FormularioColaborativo'
 import { Navigation } from './components/Navigation'
 import { Toaster } from "react-hot-toast"
+import { ValidCer } from './pages/ValidCer'
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
           <Route path='/tasks' element={<TasksPage/>} />
           <Route path='/tasks-create' element={<TaskFormPage/>} />
           <Route path='/tasks/:id' element={<TaskFormPage/>} />
+          <Route path='/form' element={<FormularioColaborativo/>} />
+          <Route path='/validar-certificados' element={<ValidCer/>} />
         </Routes>
         <Toaster/>
       </div>
