@@ -46,17 +46,19 @@ export const ValidCer = () => {
     };
 
     const handleValidate = (e) => {
+     
+        const passwordValue = document.getElementById('pass').value;
+        setPass(passwordValue);
+
         if (!cerFile || !keyFile) {
             console.error('❌ Ambos archivos (cer y key) deben ser seleccionados.');
             return;
         }
 
-        setPass(document.getElementById('pass').value);
-
         const form = new FormData();
         form.append('cer', cerFile);
         form.append('key', keyFile);
-        form.append('contrasena', pass);
+        form.append('contrasena', passwordValue);
 
         console.log('Certificado:', cerFile);
         console.log('Key:', keyFile);
@@ -84,7 +86,6 @@ export const ValidCer = () => {
             Swal.fire({
                 icon: 'error',
                 title: 'Contraseña incorrecta o error al procesar el certificado.',
-                // text: response.data.message,
             });
           });
     }
