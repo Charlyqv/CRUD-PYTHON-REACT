@@ -7,26 +7,29 @@ import { Toaster } from "react-hot-toast"
 import { ValidCer } from './pages/ValidCer'
 import { FormularioList } from './pages/FormularioList'
 import { Home } from './pages/Home'
+import { Layout } from './components/Layout'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='container mx-auto'>
-        <Navigation/>
-        <Routes>
-          <Route path='/' element={<Navigate to={"/home"}/>} />
-          <Route path='/home' element={<Home/>} />
-          <Route path='/tasks' element={<TasksPage/>} />
-          <Route path='/tasks-create' element={<TaskFormPage/>} />
-          <Route path='/tasks/:id' element={<TaskFormPage/>} />
-          <Route path='/validar-certificados' element={<ValidCer/>} />
+      {/* <div className='container mx-auto'> */}
+        {/* <Navigation/> */}
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Navigate to={"/home"}/>} />
+            <Route path='/home' element={<Home/>} />
+            <Route path='/tasks' element={<TasksPage/>} />
+            <Route path='/tasks-create' element={<TaskFormPage/>} />
+            <Route path='/tasks/:id' element={<TaskFormPage/>} />
+            <Route path='/validar-certificados' element={<ValidCer/>} />
 
-          <Route path='/form' element={<FormularioColaborativo/>} />
-          <Route path='/lista-certificados' element={<FormularioList/>} />
-          
-        </Routes>
-        <Toaster/>
-      </div>
+            <Route path='/form' element={<FormularioColaborativo/>} />
+            <Route path='/lista-formulario' element={<FormularioList/>} />
+            
+          </Routes>
+          <Toaster/>
+        </Layout>
+      {/* </div> */}
     </BrowserRouter>
   )
 }

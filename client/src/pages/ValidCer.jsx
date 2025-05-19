@@ -147,10 +147,10 @@ export const ValidCer = () => {
         </div>
         <div className="flex items-center gap-4">
             <p className='text-center'>Key</p>
-            <input 
-                type="file" 
-                placeholder='' 
-                accept=".key" 
+            <input
+                type="file"
+                placeholder=''
+                accept=".key"
                 className='border-2 border-gray-300 rounded-md p-2'
                 onChange={handleKeyChange}
                 />

@@ -1,0 +1,22 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 220px;
+  transition: width 0.3s;
+}
+
+.wrapper.hover_collapse {
+  width: 60px;
+}
+
+.page-content {
+  flex: 1;
+  /* background-color: #323233; */
+  /* transition: margin-left 0.3s; */
+  padding: 80px 20px 20px 20px;
+  /* padding: 20px; */
+  /* #f3f4f6; */
+}
